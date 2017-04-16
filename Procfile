@@ -1,3 +1,3 @@
-web: npm start
-api: swagger project start -m
-editor: swagger project edit
+#web: npm start
+#web: swagger project start -m
+web: swagger project edit
