@@ -42,6 +42,16 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /orders:
+    x-swagger-router-controller: bricklink
+    get:
+      description: Test route to get against brick link api
+      operationId: orders
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GetOrdersResponse"
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
@@ -51,6 +61,10 @@ definitions:
       - message
     properties:
       message:
+        type: string
+  GetOrdersResponse:
+    properties:
+      order:
         type: string
   ErrorResponse:
     required:
